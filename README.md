@@ -6,7 +6,7 @@ The ICSThreatQA dataset is a meticulously crafted collection of 620 question-ans
 
 The QA pairs in the dataset were developed by defining question intents based on a comprehensive threat knowledge base. This knowledge base includes entities, attributes, and their relationships within the ICS domain, making the dataset highly relevant and practical for real-world security teams. The dataset aims to provide a well-rounded resource for various analytical approaches, including fact-checking, comparisons, drawing inferences, and seeking expert opinions by focusing on diverse question categories.
 
-## Types of Questions in the Dataset
+##  Questions type
 
 The 620 QA pairs in the ICSThreatQA dataset are divided into four major question categories, each serving a different purpose in terms of information retrieval, threat analysis, and decision-making.
 
@@ -16,11 +16,11 @@ The 620 QA pairs in the ICSThreatQA dataset are divided into four major question
 
 - _Contrastive Questions_: These questions aim to compare and contrast two or more entities, focusing on their differences and similarities. These types of questions are designed to help security professionals understand how different malware, attacks, or security measures compare in terms of their impact, behavior, and characteristics.
 
- _Example (Contrastive Query)_: How does the Triton malware differ from the Industroyer malware in their impact on ICS?
+  _Example (Contrastive Query)_: How does the Triton malware differ from the Industroyer malware in their impact on ICS?
 
 - _Inferential Questions_: These questions require the respondent to make inferences based on available information or data. They are more analytical, prompting the security team to think critically about potential threats, preventive measures, or mitigation strategies.
 
- _Example (Inferential Query)_: Given the increase in ICS-targeted attacks, what preventive measures can be implemented to protect against unauthorized command injection attacks?
+  _Example (Inferential Query)_: Given the increase in ICS-targeted attacks, what preventive measures can be implemented to protect against unauthorized command injection attacks?
 
 - _Opinion-Based Questions_: These questions seek subjective responses based on expert knowledge or personal judgment. They are intended to gauge the perspectives or evaluations of security professionals regarding specific security practices, policies, or tools.
 
@@ -35,7 +35,7 @@ The evaluation of the ICSThreatQA dataset is designed to ensure the quality, div
 
 - _Diversity_: Given the varying nature of cybersecurity threats in ICS environments, the dataset includes a broad spectrum of questions that cover different topics, question types, and problem-solving approaches. This diversity ensures that the dataset is useful for a wide range of scenarios, from basic information retrieval to complex threat analysis.
 
-- Accuracy: The dataset relies on expert knowledge and a thorough understanding of ICS security, ensuring that all answers are factually accurate and up-to-date with current cybersecurity standards and best practices. This is especially important for factual and contrastive queries.
+- _Accuracy_: The dataset relies on expert knowledge and a thorough understanding of ICS security, ensuring that all answers are factually accurate and up-to-date with current cybersecurity standards and best practices. This is especially important for factual and contrastive queries.
 
 - _Human-in-the-Loop Validation_: To improve the diversity and relevance of the questions, the dataset creation process employed a human-in-the-loop approach. This ensured that the dataset contained unique and creative questions that go beyond simple question classification and capture the complexities of real-world ICS security concerns.
 
