@@ -1,10 +1,10 @@
 # ICSThreatQA-Dataset
 
-## Overview of the ICSThreatQA Dataset
+## Overview
 
-The ICSThreatQA dataset is a meticulously crafted collection of 620 question-answer (QA) pairs specifically designed to assist security teams in understanding and addressing cybersecurity threats in Industrial Control Systems (ICS). These questions are categorized into four distinct types: factual, contrastive, inferential, and opinion-based. The dataset was created through a human-in-the-loop approach, ensuring that the QA pairs are both diverse and contextually rich. Each question is carefully constructed to reflect the complexity of ICS security and to align with the needs of security teams working to defend against cyber threats targeting critical infrastructure.
+The ICSThreatQA dataset is a meticulously crafted collection of 620 question-answer (QA) pairs designed to assist security teams in understanding and addressing cybersecurity threats in Industrial Control Systems (ICS). These questions are categorized into four distinct types: _factual, contrastive, inferential, and opinion-based_. The dataset was created through a human-in-the-loop approach, ensuring that the QA pairs are both diverse and contextually rich. Each question is carefully constructed to reflect ICS security's complexity and align with the needs of security teams working to defend against cyber threats targeting critical infrastructure.
 
-The QA pairs in the dataset were developed by defining question intents based on a comprehensive threat knowledge base. This knowledge base includes entities, attributes, and their relationships within the ICS domain, making the dataset highly relevant and practical for real-world security teams. By focusing on diverse question categories, the dataset aims to provide a well-rounded resource for various analytical approaches, including fact-checking, comparisons, drawing inferences, and seeking expert opinions.
+The QA pairs in the dataset were developed by defining question intents based on a comprehensive threat knowledge base. This knowledge base includes entities, attributes, and their relationships within the ICS domain, making the dataset highly relevant and practical for real-world security teams. The dataset aims to provide a well-rounded resource for various analytical approaches, including fact-checking, comparisons, drawing inferences, and seeking expert opinions by focusing on diverse question categories.
 
 ## Types of Questions in the Dataset
 
@@ -12,24 +12,19 @@ The 620 QA pairs in the ICSThreatQA dataset are divided into four major question
 
 - Factual Questions: These questions focus on seeking clear, specific, and verifiable information about a particular topic or entity within ICS security. The goal is to provide concise facts about the functionality or attributes of security-related entities.
 
-- Example:
+- Example (Factual Query): What is the primary function of the Stuxnet malware in ICS environments?
 
-- Factual Query: What is the primary function of the Stuxnet malware in ICS environments?
-Contrastive Questions: These questions aim to compare and contrast two or more entities, focusing on their differences and similarities. These types of questions are designed to help security professionals understand how different malware, attacks, or security measures compare in terms of their impact, behavior, and characteristics.
+- Contrastive Questions: These questions aim to compare and contrast two or more entities, focusing on their differences and similarities. These types of questions are designed to help security professionals understand how different malware, attacks, or security measures compare in terms of their impact, behavior, and characteristics.
 
-- Example:
+- Example (Contrastive Query): How does the Triton malware differ from the Industroyer malware in their impact on ICS?
 
-- Contrastive Query: How does the Triton malware differ from the Industroyer malware in their impact on ICS?
-Inferential Questions: These questions require the respondent to make inferences based on available information or data. They are more analytical in nature, prompting the security team to think critically about potential threats, preventive measures, or mitigation strategies.
+- Inferential Questions: These questions require the respondent to make inferences based on available information or data. They are more analytical in nature, prompting the security team to think critically about potential threats, preventive measures, or mitigation strategies.
 
-- Example:
+- Example (Inferential Query): Given the increase in ICS-targeted attacks, what preventive measures can be implemented to protect against unauthorized command injection attacks?
 
-- Inferential Query: Given the increase in ICS-targeted attacks, what preventive measures can be implemented to protect against unauthorized command injection attacks?
-Opinion-Based Questions: These questions seek subjective responses based on expert knowledge or personal judgment. They are intended to gauge the perspectives or evaluations of security professionals regarding specific security practices, policies, or tools.
+- Opinion-Based Questions: These questions seek subjective responses based on expert knowledge or personal judgment. They are intended to gauge the perspectives or evaluations of security professionals regarding specific security practices, policies, or tools.
 
-- Example:
-
-- Opinion-Based Query: Do you think the implementation of multi-factor authentication (MFA) is sufficient to secure remote access in ICS environments?
+- Example (Opinion-Based Query): Do you think the implementation of multi-factor authentication (MFA) is sufficient to secure remote access in ICS environments?
 
 
 ## Evaluation of the Dataset
