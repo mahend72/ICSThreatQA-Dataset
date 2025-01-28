@@ -10,35 +10,35 @@ The QA pairs in the dataset were developed by defining question intents based on
 
 The 620 QA pairs in the ICSThreatQA dataset are divided into four major question categories, each serving a different purpose in terms of information retrieval, threat analysis, and decision-making.
 
-- Factual Questions: These questions focus on seeking clear, specific, and verifiable information about a particular topic or entity within ICS security. The goal is to provide concise facts about the functionality or attributes of security-related entities.
+- _Factual Questions_: These questions focus on seeking clear, specific, and verifiable information about a particular topic or entity within ICS security. The goal is to provide concise facts about the functionality or attributes of security-related entities.
 
-- Example (Factual Query): What is the primary function of the Stuxnet malware in ICS environments?
+  _Example (Factual Query)_: What is the primary function of the Stuxnet malware in ICS environments?
 
-- Contrastive Questions: These questions aim to compare and contrast two or more entities, focusing on their differences and similarities. These types of questions are designed to help security professionals understand how different malware, attacks, or security measures compare in terms of their impact, behavior, and characteristics.
+- _Contrastive Questions_: These questions aim to compare and contrast two or more entities, focusing on their differences and similarities. These types of questions are designed to help security professionals understand how different malware, attacks, or security measures compare in terms of their impact, behavior, and characteristics.
 
-- Example (Contrastive Query): How does the Triton malware differ from the Industroyer malware in their impact on ICS?
+ _Example (Contrastive Query)_: How does the Triton malware differ from the Industroyer malware in their impact on ICS?
 
-- Inferential Questions: These questions require the respondent to make inferences based on available information or data. They are more analytical in nature, prompting the security team to think critically about potential threats, preventive measures, or mitigation strategies.
+- _Inferential Questions_: These questions require the respondent to make inferences based on available information or data. They are more analytical, prompting the security team to think critically about potential threats, preventive measures, or mitigation strategies.
 
-- Example (Inferential Query): Given the increase in ICS-targeted attacks, what preventive measures can be implemented to protect against unauthorized command injection attacks?
+ _Example (Inferential Query)_: Given the increase in ICS-targeted attacks, what preventive measures can be implemented to protect against unauthorized command injection attacks?
 
-- Opinion-Based Questions: These questions seek subjective responses based on expert knowledge or personal judgment. They are intended to gauge the perspectives or evaluations of security professionals regarding specific security practices, policies, or tools.
+- _Opinion-Based Questions_: These questions seek subjective responses based on expert knowledge or personal judgment. They are intended to gauge the perspectives or evaluations of security professionals regarding specific security practices, policies, or tools.
 
-- Example (Opinion-Based Query): Do you think the implementation of multi-factor authentication (MFA) is sufficient to secure remote access in ICS environments?
+  _Example (Opinion-Based Query)_: Do you think the implementation of multi-factor authentication (MFA) is sufficient to secure remote access in ICS environments?
 
 
 ## Evaluation of the Dataset
 
 The evaluation of the ICSThreatQA dataset is designed to ensure the quality, diversity, and relevance of the generated QA pairs. The process includes the following key evaluation criteria:
 
-- Relevance: The dataset must ensure that the questions and their corresponding answers are directly aligned with the needs of ICS security teams. This ensures the questions are meaningful, contextually appropriate, and can be used effectively in real-world security contexts.
+- _Relevance_: The dataset must ensure that the questions and their corresponding answers are directly aligned with the needs of ICS security teams. This ensures the questions are meaningful, contextually appropriate, and can be used effectively in real-world security contexts.
 
-- Diversity: Given the varying nature of cybersecurity threats in ICS environments, the dataset includes a broad spectrum of questions that cover different topics, question types, and problem-solving approaches. This diversity ensures that the dataset is useful for a wide range of scenarios, from basic information retrieval to complex threat analysis.
+- _Diversity_: Given the varying nature of cybersecurity threats in ICS environments, the dataset includes a broad spectrum of questions that cover different topics, question types, and problem-solving approaches. This diversity ensures that the dataset is useful for a wide range of scenarios, from basic information retrieval to complex threat analysis.
 
 - Accuracy: The dataset relies on expert knowledge and a thorough understanding of ICS security, ensuring that all answers are factually accurate and up-to-date with current cybersecurity standards and best practices. This is especially important for factual and contrastive queries.
 
-- Human-in-the-Loop Validation: To improve the diversity and relevance of the questions, the dataset creation process employed a human-in-the-loop approach. This ensured that the dataset contained unique and creative questions that go beyond simple question classification and capture the complexities of real-world ICS security concerns.
+- _Human-in-the-Loop Validation_: To improve the diversity and relevance of the questions, the dataset creation process employed a human-in-the-loop approach. This ensured that the dataset contained unique and creative questions that go beyond simple question classification and capture the complexities of real-world ICS security concerns.
 
-- Usability: The dataset is designed to be a practical resource for security teams, offering insights into various threats, security measures, and attack scenarios. Each question type is crafted to be useful for different stages of threat analysis, from gathering factual data to forming expert opinions.
+- _Usability_: The dataset is designed to be a practical resource for security teams, offering insights into various threats, security measures, and attack scenarios. Each question type is crafted to be useful for different stages of threat analysis, from gathering factual data to forming expert opinions.
 
 Overall, the ICSThreatQA dataset is a robust tool for enhancing the capabilities of cybersecurity professionals working in ICS environments. The combination of factual, contrastive, inferential, and opinion-based questions ensures that it provides a comprehensive resource for tackling a wide range of security challenges.
