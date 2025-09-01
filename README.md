@@ -52,5 +52,5 @@ cite this paper
   journal={Expert Systems with Applications},
   pages={130180},
   year={2025},
-  publisher={Elsevier}
+  publisher={Elsevier},
 }
