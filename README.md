@@ -45,7 +45,7 @@ Overall, the ICSThreatQA dataset is a robust tool for enhancing the capabilities
 
 
 cite this paper 
-
+```bash
 @article{rani2025icsthreatqa,
   title={ICSThreatQA: A Knowledge-Graph Enhanced Question Answering Model for Industrial Control System Threat Intelligence},
   author={Rani, Ruby and Kumar, Mahender and Epiphaniou, Gregory and Maple, Carsten},
@@ -54,3 +54,4 @@ cite this paper
   year={2025},
   publisher={Elsevier},
 }
+```
