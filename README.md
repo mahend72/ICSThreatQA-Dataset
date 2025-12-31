@@ -2,11 +2,11 @@
 
 ## Overview
 
-The ICSThreatQA dataset is a meticulously crafted collection of 620 question-answer (QA) pairs designed to assist security teams in understanding and addressing cybersecurity threats in Industrial Control Systems (ICS). These questions are categorized into four distinct types: _factual, contrastive, inferential, and opinion-based_. The dataset was created through a human-in-the-loop approach, ensuring that the QA pairs are both diverse and contextually rich. Each question is carefully constructed to reflect ICS security's complexity and align with the needs of security teams working to defend against cyber threats targeting critical infrastructure.
+The ICSThreatQA dataset is a meticulously crafted collection of 620 question-answer (QA) pairs designed to assist security teams in understanding and addressing cybersecurity threats in Industrial Control Systems (ICS). These questions are categorised into four distinct types: _factual, contrastive, inferential, and opinion-based_. The dataset was created through a human-in-the-loop approach, ensuring that the QA pairs are both diverse and contextually rich. Each question is carefully constructed to reflect ICS security's complexity and align with the needs of security teams working to defend against cyber threats targeting critical infrastructure.
 
 The QA pairs in the dataset were developed by defining question intents based on a comprehensive threat knowledge base. This knowledge base includes entities, attributes, and their relationships within the ICS domain, making the dataset highly relevant and practical for real-world security teams. The dataset aims to provide a well-rounded resource for various analytical approaches, including fact-checking, comparisons, drawing inferences, and seeking expert opinions by focusing on diverse question categories.
 
-##  Questions type
+##  Question type
 
 The 620 QA pairs in the ICSThreatQA dataset are divided into four major question categories, each serving a different purpose in terms of information retrieval, threat analysis, and decision-making.
 
