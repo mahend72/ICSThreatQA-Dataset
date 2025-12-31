@@ -20,7 +20,7 @@ The 620 QA pairs in the ICSThreatQA dataset are divided into four major question
 
 - _Inferential Questions_: These questions require the respondent to make inferences based on available information or data. They are more analytical, prompting the security team to think critically about potential threats, preventive measures, or mitigation strategies.
 
-  _Example (Inferential Query)_: Given the increase in ICS-targeted attacks, what preventive measures can be implemented to protect against unauthorized command injection attacks?
+  _Example (Inferential Query)_: Given the increase in ICS-targeted attacks, what preventive actions can be implemented to protect against unauthorised command injection attacks?
 
 - _Opinion-Based Questions_: These questions seek subjective responses based on expert knowledge or personal judgment. They are intended to gauge the perspectives or evaluations of security professionals regarding specific security practices, policies, or tools.
 
