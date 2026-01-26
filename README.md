@@ -14,7 +14,7 @@ The 620 QA pairs in the ICSThreatQA dataset are divided into four major question
 
   _Example (Factual Query)_: What is the primary function of the Stuxnet malware in ICS environments?
 
-- _Contrastive Questions_: These questions aim to compare and contrast two or more entities, focusing on their differences and similarities. These types of questions are designed to help security professionals understand how different malware, attacks, or security measures compare in terms of their impact, behavior, and characteristics.
+- _Contrastive Questions_: These questions aim to compare and contrast two or more entities, focusing on their differences and similarities. These types of questions are designed to help security professionals understand how different malware, attacks, or security measures compare in terms of their impact, behaviour, and characteristics.
 
   _Example (Contrastive Query)_: How does the Triton malware differ from the Industroyer malware in their impact on ICS?
 
