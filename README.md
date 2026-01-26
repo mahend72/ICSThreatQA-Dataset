@@ -24,7 +24,7 @@ The 620 QA pairs in the ICSThreatQA dataset are divided into four major question
 
 - _Opinion-Based Questions_: These questions seek subjective responses based on expert knowledge or personal judgment. They are intended to gauge security professionals' perspectives or evaluations of specific security practices, policies, or tools.
 
-  _Example (Opinion-Based Query)_: Do you think the implementation of multi-factor authentication (MFA) is sufficient to secure remote access in ICS environments?
+  _Example (Opinion-Based Query)_: Do you think the implementation of multi-factor authentication (MFA) is adequate to secure remote access in ICS environments?
 
 
 ## Evaluation of the Dataset
