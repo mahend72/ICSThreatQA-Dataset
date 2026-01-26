@@ -8,7 +8,7 @@ The QA pairs in the dataset were developed by defining question intents based on
 
 ##  Question type
 
-The 620 QA pairs in the ICSThreatQA dataset are divided into four major question categories, each serving a different purpose in terms of information retrieval, threat analysis, and decision-making.
+The 620 QA pairs in the ICSThreatQA dataset are divided into four major question categories, each serving a different purpose for information retrieval, threat analysis, and decision-making.
 
 - _Factual Questions_: These questions focus on seeking clear, specific, and verifiable information about a particular topic or entity within ICS security. The goal is to provide concise facts about the functionality or attributes of security-related entities.
 
@@ -22,7 +22,7 @@ The 620 QA pairs in the ICSThreatQA dataset are divided into four major question
 
   _Example (Inferential Query)_: Given the increase in ICS-targeted attacks, what preventive actions can be implemented to protect against unauthorised command injection attacks?
 
-- _Opinion-Based Questions_: These questions seek subjective responses based on expert knowledge or personal judgment. They are intended to gauge the perspectives or evaluations of security professionals regarding specific security practices, policies, or tools.
+- _Opinion-Based Questions_: These questions seek subjective responses based on expert knowledge or personal judgment. They are intended to gauge security professionals' perspectives or evaluations of specific security practices, policies, or tools.
 
   _Example (Opinion-Based Query)_: Do you think the implementation of multi-factor authentication (MFA) is sufficient to secure remote access in ICS environments?
 
