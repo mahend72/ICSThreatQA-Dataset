@@ -37,7 +37,7 @@ The evaluation of the ICSThreatQA dataset is designed to ensure the quality, div
 
 - _Accuracy_: The dataset relies on expert knowledge and a thorough understanding of ICS security, ensuring that all answers are factually accurate and up-to-date with current cybersecurity standards and best practices. This is especially important for factual and contrastive queries.
 
-- _Human-in-the-Loop Validation_: To improve the diversity and relevance of the questions, the dataset creation process employed a human-in-the-loop approach. This ensured that the dataset contained unique and creative questions that go beyond simple question classification and capture the complexities of real-world ICS security concerns.
+- _Human-in-the-Loop Validation_: To improve the diversity and relevance of the questions, the dataset creation process employed a human-in-the-loop system. This ensured that the dataset contained unique and creative questions that go beyond simple question classification and capture the complexities of real-world ICS security concerns.
 
 - _Usability_: The dataset is designed to be a practical resource for security teams, offering insights into various threats, security measures, and attack scenarios. Each question type is framed to be useful for different stages of threat analysis, from gathering factual data to forming expert opinions.
 
