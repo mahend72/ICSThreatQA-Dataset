@@ -16,12 +16,12 @@ ICS environments (SCADA systems, PLCs, industrial networks) sit at the intersect
 
 ## Dataset
 
-`QA pairs (benchmark)/` contains 620 QA pairs split across four question types, one Excel file per type:
+`qa_pairs_benchmark/` contains 620 QA pairs split across four question types, one file per type (provided as both `.xlsx` and `.csv`):
 
-- **Factual** (`Factual.xlsx`) — direct, verifiable questions about ICS entities, e.g. "What is the primary function of the Stuxnet malware in ICS environments?"
-- **Contrastive** (`Contrastive.xlsx`) — questions comparing two or more entities (malware, attacks, defenses), e.g. "How does the Triton malware differ from the Industroyer malware in their impact on ICS?"
-- **Inferential** (`Inferential.xlsx`) — questions requiring analytical reasoning beyond stated facts, e.g. preventive or mitigation actions given a described threat trend.
-- **Opinion-based** (`Opinion.xlsx`) — questions seeking expert judgment on security practices, policies, or tools, e.g. whether MFA is adequate for securing remote ICS access.
+- **Factual** (`factual.xlsx` / `.csv`) — direct, verifiable questions about ICS entities, e.g. "What is the primary function of the Stuxnet malware in ICS environments?"
+- **Contrastive** (`contrastive.xlsx` / `.csv`) — questions comparing two or more entities (malware, attacks, defenses), e.g. "How does the Triton malware differ from the Industroyer malware in their impact on ICS?"
+- **Inferential** (`inferential.xlsx` / `.csv`) — questions requiring analytical reasoning beyond stated facts, e.g. preventive or mitigation actions given a described threat trend.
+- **Opinion-based** (`opinion.xlsx` / `.csv`) — questions seeking expert judgment on security practices, policies, or tools, e.g. whether MFA is adequate for securing remote ICS access.
 
 The QA pairs were constructed from a threat knowledge base of ICS entities, attributes, and relationships, with human-in-the-loop review used to keep the questions diverse and contextually grounded rather than templated.
 
@@ -30,44 +30,66 @@ The QA pairs were constructed from a threat knowledge base of ICS entities, attr
 ```
 ICSThreatQA-Dataset/
 ├── README.md
-├── Model response                         # near-empty placeholder file (no content)
-├── QA pairs (benchmark)/
-│   ├── Factual.xlsx
-│   ├── Contrastive.xlsx
-│   ├── Inferential.xlsx
-│   └── Opinion.xlsx
-├── Models reponses/                       # [sic] folder name as committed in the repository
-│   ├── Knowledge_based RAG model.xlsx
-│   ├── Hybrid_based model.xlsx
-│   └── keyword_based_model_outcome.xlsx
-└── Experiment Results/
-    ├── combined_Evaluation.xlsx
-    ├── Zero shot/
-    │   ├── RAG_evaluation_zero_shot_results.xlsx
-    │   ├── GPT_4o_evaluation_zero_shot_results.xlsx
-    │   ├── Keyword_evaluation_zero_shot_results.xlsx
-    │   ├── Knowledge_evaluation_zero_shot_results.xlsx
-    │   ├── Hybrid_evaluation_zero_shot_results.xlsx
-    │   └── Total_GPT_4_evaluation_few_shot_results.csv   # note: named "few_shot" but currently located under Zero shot/
-    └── Few shot/
-        ├── Hybrid_evaluation_few_shot_results.xlsx
-        ├── RAG_evaluation_few_shot_results.xlsx
-        └── Keyword_evaluation_few_shot_results.xlsx
+├── LICENSE                                       # CC BY 4.0
+├── CITATION.cff                                  # machine-readable citation metadata
+├── qa_pairs_benchmark/
+│   ├── factual.xlsx
+│   ├── factual.csv
+│   ├── contrastive.xlsx
+│   ├── contrastive.csv
+│   ├── inferential.xlsx
+│   ├── inferential.csv
+│   ├── opinion.xlsx
+│   └── opinion.csv
+├── model_responses/
+│   ├── knowledge_based_rag_model.xlsx
+│   ├── knowledge_based_rag_model.csv
+│   ├── hybrid_based_model.xlsx
+│   ├── hybrid_based_model.csv
+│   ├── keyword_based_model_outcome.xlsx
+│   └── keyword_based_model_outcome.csv
+└── experiment_results/
+    ├── combined_evaluation.xlsx
+    ├── combined_evaluation.csv
+    ├── zero_shot/
+    │   ├── rag_evaluation_zero_shot_results.xlsx
+    │   ├── rag_evaluation_zero_shot_results__factual.csv
+    │   ├── rag_evaluation_zero_shot_results__contrastive.csv
+    │   ├── rag_evaluation_zero_shot_results__inferential.csv
+    │   ├── rag_evaluation_zero_shot_results__opinion.csv
+    │   ├── gpt4o_evaluation_zero_shot_results.xlsx
+    │   ├── gpt4o_evaluation_zero_shot_results__*.csv        # one per sheet: factual/contrastive/inferential/opinion
+    │   ├── keyword_evaluation_zero_shot_results.xlsx
+    │   ├── keyword_evaluation_zero_shot_results__*.csv      # one per sheet
+    │   ├── knowledge_evaluation_zero_shot_results.xlsx
+    │   ├── knowledge_evaluation_zero_shot_results__*.csv    # one per sheet
+    │   ├── hybrid_evaluation_zero_shot_results.xlsx
+    │   ├── hybrid_evaluation_zero_shot_results__*.csv       # one per sheet
+    │   └── total_gpt4_evaluation_few_shot_results.csv       # note: named "few_shot" but located under zero_shot/
+    └── few_shot/
+        ├── hybrid_evaluation_few_shot_results.xlsx
+        ├── hybrid_evaluation_few_shot_results__*.csv        # one per sheet
+        ├── rag_evaluation_few_shot_results.xlsx
+        ├── rag_evaluation_few_shot_results__*.csv           # one per sheet
+        ├── keyword_evaluation_few_shot_results.xlsx
+        └── keyword_evaluation_few_shot_results__*.csv       # one per sheet
 ```
 
-Notes on the structure as committed:
-- The `Models reponses/` folder name contains a typo ("reponses" instead of "responses"). It is left as-is here to match the actual repository; see the summary at the end of this task for a suggested rename.
-- `Total_GPT_4_evaluation_few_shot_results.csv` is a few-shot result file that is currently located inside the `Zero shot/` directory rather than `Few shot/`. This is reported as observed, not corrected, since it may reflect an intentional grouping decision by the dataset authors.
-- `Model response` (top level) contains no usable content.
+Notes on the structure:
+- All folders and files now use lowercase `snake_case`, with the original typo `Models reponses/` corrected to `model_responses/`.
+- The empty top-level `Model response` file (previously present, no content) has been removed.
+- Every `.xlsx` file has a `.csv` mirror with identical data, generated directly from the spreadsheet and not hand-edited. Workbooks with one sheet per question category (`factual`/`contrastive`/`inferential`/`opinion`) export one CSV per sheet, named `<file>__<category>.csv`; single-sheet workbooks export as `<file>.csv`.
+- `total_gpt4_evaluation_few_shot_results.csv` is a few-shot result file that remains inside `zero_shot/` rather than `few_shot/`. This placement is reported as observed and was intentionally **not** moved, since it touches experiment-result organization and may reflect a decision by the dataset authors.
+- Some original workbooks contain minor typos in their internal sheet names (e.g. a `Contrastive ` sheet with a trailing space, a `Contrative` sheet, and a `Knowldge_based model` sheet). These are part of the original experiment data and were left untouched; where a sheet name feeds a generated CSV filename (e.g. `keyword_evaluation_few_shot_results__contrative.csv`), the filename mirrors the source sheet name exactly rather than silently correcting it.
 
 ## Evaluated Approaches
 
-Based on the files present in `Models reponses/` and `Experiment Results/`, the following QA approaches were run against the benchmark:
+Based on the files present in `model_responses/` and `experiment_results/`, the following QA approaches were run against the benchmark:
 
-- **Knowledge-based RAG** — a retrieval-augmented approach grounded in the ICS threat knowledge graph (`Knowledge_based RAG model.xlsx`, `RAG_evaluation_*_results.xlsx`).
-- **Hybrid model** — combining retrieval/knowledge grounding with another method (`Hybrid_based model.xlsx`, `Hybrid_evaluation_*_results.xlsx`).
-- **Keyword-based model** — a non-neural, keyword-matching baseline (`keyword_based_model_outcome.xlsx`, `Keyword_evaluation_*_results.xlsx`).
-- **GPT-4o** — evaluated in a zero-shot setting (`GPT_4o_evaluation_zero_shot_results.xlsx`), with an additional GPT-4 few-shot result file present (see structure note above).
+- **Knowledge-based RAG** — a retrieval-augmented approach grounded in the ICS threat knowledge graph (`knowledge_based_rag_model.xlsx`, `rag_evaluation_*_results.xlsx`).
+- **Hybrid model** — combining retrieval/knowledge grounding with another method (`hybrid_based_model.xlsx`, `hybrid_evaluation_*_results.xlsx`).
+- **Keyword-based model** — a non-neural, keyword-matching baseline (`keyword_based_model_outcome.xlsx`, `keyword_evaluation_*_results.xlsx`).
+- **GPT-4o** — evaluated in a zero-shot setting (`gpt4o_evaluation_zero_shot_results.xlsx`), with an additional GPT-4 few-shot result file present (see structure note above).
 
 Each of the Knowledge-based, Hybrid, and Keyword-based approaches has both zero-shot and few-shot evaluation results, allowing prompting-strategy comparisons within each approach. This README does not restate specific accuracy or score values from these files — see [Experimental Results](#experimental-results) for where to find them.
 
@@ -75,9 +97,9 @@ Each of the Knowledge-based, Hybrid, and Keyword-based approaches has both zero-
 
 Evaluation outputs are provided as spreadsheets rather than summarized here, so that consumers of the dataset can inspect and reanalyze the raw scoring:
 
-- `Experiment Results/combined_Evaluation.xlsx` — a combined view across approaches.
-- `Experiment Results/Zero shot/` — per-approach evaluation results under zero-shot prompting.
-- `Experiment Results/Few shot/` — per-approach evaluation results under few-shot prompting.
+- `experiment_results/combined_evaluation.xlsx` — a combined view across approaches.
+- `experiment_results/zero_shot/` — per-approach evaluation results under zero-shot prompting.
+- `experiment_results/few_shot/` — per-approach evaluation results under few-shot prompting.
 
 This README intentionally does not report specific metric values, scores, or rankings, since those are only meaningful in the context of the original paper's methodology. Refer to the published article and the spreadsheets themselves for evaluation criteria and results.
 
@@ -112,9 +134,11 @@ The following are **future research directions** that this benchmark could suppo
 
 This repository provides:
 
-- The fixed benchmark QA pairs (`QA pairs (benchmark)/`), enabling any approach to be run against the same question set.
-- Raw model outputs for the three evaluated non-LLM-baseline approaches (`Models reponses/`), which can be used to inspect actual generated answers rather than only aggregate scores.
-- Evaluation spreadsheets broken out by approach and by prompting strategy (`Experiment Results/`), enabling side-by-side comparison and independent reanalysis of the reported evaluation criteria.
+- The fixed benchmark QA pairs (`qa_pairs_benchmark/`), enabling any approach to be run against the same question set.
+- Raw model outputs for the three evaluated non-LLM-baseline approaches (`model_responses/`), which can be used to inspect actual generated answers rather than only aggregate scores.
+- Evaluation spreadsheets broken out by approach and by prompting strategy (`experiment_results/`), enabling side-by-side comparison and independent reanalysis of the reported evaluation criteria.
+- A `.csv` mirror of every `.xlsx` file, so the data can be loaded without Excel or a spreadsheet-specific library, diffed in version control, and used directly in analysis scripts (pandas, R, etc.).
+- `CITATION.cff` for unambiguous, machine-readable attribution, and a `LICENSE` clarifying reuse terms.
 
 Together these support reproducing comparisons between approaches and re-running additional evaluation criteria (including those listed under AI Assurance Extensions above) against the same fixed set of questions and existing model responses, without requiring the original experiments to be rerun from scratch.
 
@@ -122,9 +146,13 @@ Together these support reproducing comparisons between approaches and re-running
 
 This dataset is provided for research purposes. Answers in this dataset — whether human-authored reference answers or model-generated outputs — should not be used as a substitute for validated professional security analysis in an operational ICS environment. Any use of QA systems evaluated on this benchmark in a real security context should retain qualified human review before acting on their outputs.
 
+## License
+
+This repository is released under the [Creative Commons Attribution 4.0 International License](LICENSE) (CC BY 4.0), a common license for research datasets. It permits reuse and redistribution with attribution. If the original publisher specifies different terms for the dataset, defer to those; this file reflects the terms chosen for this repository, not a claim about the publisher's own licensing.
+
 ## Citation
 
-If you use this dataset, please cite the original paper:
+If you use this dataset, please cite the original paper (also available in machine-readable form in [`CITATION.cff`](CITATION.cff)):
 
 ```bibtex
 @article{rani2025icsthreatqa,

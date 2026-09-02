@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite the following article."
+type: dataset
+title: "ICSThreatQA-Dataset"
+authors:
+  - family-names: "Rani"
+    given-names: "Ruby"
+  - family-names: "Kumar"
+    given-names: "Mahender"
+  - family-names: "Epiphaniou"
+    given-names: "Gregory"
+  - family-names: "Maple"
+    given-names: "Carsten"
+date-released: "2025"
+license: "CC-BY-4.0"
+preferred-citation:
+  type: article
+  title: "ICSThreatQA: A Knowledge-Graph Enhanced Question Answering Model for Industrial Control System Threat Intelligence"
+  authors:
+    - family-names: "Rani"
+      given-names: "Ruby"
+    - family-names: "Kumar"
+      given-names: "Mahender"
+    - family-names: "Epiphaniou"
+      given-names: "Gregory"
+    - family-names: "Maple"
+      given-names: "Carsten"
+  journal: "Expert Systems with Applications"
+  publisher:
+    name: "Elsevier"
+  year: 2025
+  pages: "130180"
+  # NOTE: volume, issue, and DOI are not present in this repository's source
+  # metadata and are intentionally omitted rather than guessed. Verify these
+  # fields against the published version before relying on them.
