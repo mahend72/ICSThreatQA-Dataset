@@ -147,6 +147,3 @@ For QA systems intended to support security-critical decision-making, a second q
 
 ICSThreatQA's combination of a fixed, human-validated benchmark with multiple grounded and ungrounded approaches evaluated against it makes it a candidate testbed for studying this second question, in addition to the first.
 
-## Keywords
-
-`AI Assurance`, `ICS Security`, `Industrial Control Systems`, `Cybersecurity`, `Threat Intelligence`, `Question Answering`, `RAG`, `Knowledge Graphs`, `LLM Evaluation`, `Trustworthy AI`, `AI Security`
